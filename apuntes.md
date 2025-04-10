@@ -128,3 +128,107 @@ Texto con enlace al pie de página [^1]
 A-[x]
 B-[ ]
 C-[ ]
+
+
+# HTML
+
+HTML es un lenguaje de marcas para hacer páginas web en navegadores y actualmente el más utilizado. Las normas de este lenguaje las define el World Wide Web (W3C) y por esto todas las páginas web están hechas de forma similar.
+
+Historia del HTML
+
+En el año 1993 Tim Bernes-Lee describe el lenguaje HTML en un primer borrador que no se convirtió en estándar. Posteriormente, Dave Raggett propone el HTML+, que tampoco funciona bien. La IETF crea un grupo de trabajo para desarrollar un estándar basado en los borradores anteriores. Entonces surge el HTML 2.0 en 1996, el desarrollo pasa al W3C. A partir de ahí se ha ido mejorando el lenguaje hasta llegar al HTML 5 el utilizado actualmente donde nos da muchísimas más opciones.
+
+HTML significa HyperText Markup Language
+
+HyperText es el texto que enlaza con otros recursos como la base de la web donde se realiza.
+Markup son las etiquetas que estructuran y dan forma a la página web.
+Language es el lenguaje con reglas y estructuras.
+En este lenguaje de marcas hay muchas opciones para poder hacer tu página web mejor y ordenada a forma de programación. Para poder realizar todo esto tendremos que saber las etiquetas básicas y sus funciones.
+
+Para empezar una página web hay una etiqueta que define en que html queremos empezar a escribir donde te da cierta información importante como el idioma predeterminado, el título y más cosas.
+
+Ahora veremos un ejemplo de código HTML y lo que hace cada etiqueta que contiene.
+
+<!DOCTYPE html> Aquí nos dice el tipo de documento que es.
+<html lang="es"> Aquí podemos ver el idioma y la etiqueta de HTML se abre con todo lo que contendrá la página.
+<head> Aquí se encuentra lo que no se verá en la página web pero está configurado y información adicional.
+<meta charset="UTF-8"> Aquí podemos ver los caracteres que utilizará.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">Información adicional
+<title>Primera Página ASIX </title> Aquí podemos ver el título de la página.
+</head>
+
+Como podemos ver las etiquetas siempre se abren y se cierran con <etiqueta> Texto </etiqueta>
+También se puede observar que dentro de las etiquetas podemos poner atributos para que hagan cosas más concretas y fáciles de entender.
+<etiqueta> atributo Texto </etiqueta>
+También existen etiquetas sin contenido como una imagen y se les llama elementos vacíos o al contrario si tienen más de un elemento juntos se les llama anidamiento.
+
+Aqui tenemos otro ejemplo donde hay muchas más etiqueta muy utilizadas
+<body> Esta etiqueta encierra todo el contenido que mostrará la página web
+<h1>Primer Título </h1> En esta etiqueta se muestra el titulo del articulo que va abajo y el número indica la grandaria e importancia.
+<hr> Esta etiqueta mete una línea horizontal para separar información.
+<h2>Índice de contenidos</h2> Una etiqueta igual pero con el título menor
+<!--ol y li es una lista ordenada--> Esta etiqueta es un comentario que sirve para guiar al programador para saber la estructura, no sale en la página web.
+<ol> Esta etiqueta hace una lista ordenada
+<li>Introducción </li> Y esta etiqueta ordena la lista por números
+<li>Quienes somos</li>
+<ul>Software</ul> Esta etiqueta hace una lista desordenada
+<ul>Hardware</ul>
+<li>Nuestras listas de negocios</li>
+</ol>
+<ul>
+<li>Intro</li>
+<li>Quienes somos</li>
+<li>Nuestra lista</li>
+</ul>
+<p> Esta etiqueta hace un párrafo y lo mueve a una línea nueva y ocupa todo el ancho de la página
+<strong>Lorem ipsum</strong> Esta etiqueta resalta la letra en negrita.
+dolor sit, amet consectetur adipiscing elit. <span>Optio, quas! Quas, omnis vel quaerat eum dolorem fugit ab inventore veritatis</span> Esta etiqueta sirve para seleccionar un trozo de texto, quia cupiditate
+recusandae ipsum eos ipsam quibusdam repudiandae, sed cumque. </p>
+<br> Esta etiqueta sirve para hacer un salto de línea
+<em>Lorem ipsum</em> esta etiqueta sirve para dar un énfasis
+</body> Cierre de la etiqueta de body
+</html> Cierre de la etiqueta de html
+
+Las rutas se usan para enlazar archivos (como imágenes, CSS o scripts) y hay dos tipos que son las siguientes:
+
+Relativas: dependen de la ubicación actual del archivo.
+  ```<img src="img/logo.png" alt="Logo">```
+
+Absolutas: incluyen toda la dirección desde el servidor.
+
+```<img src="C:/img/logo.png" alt="Logo">```
+
+Una herramienta muy útil que hemos visto son los validadores de códigos HTML ya que nos permiten ver si hay algún fallo en nuestro código HTML de forma rápida y segura. Funciona de manera simple, subes tu archivo y el validador solo lo revisa y te pone los fallos y donde están.
+
+![validador1](img/validador1.png)
+![validador2](img/validador2.png)
+
+Los formularios permiten al usuario enviar datos a una página diferente.
+<form>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre">
+  
+  <label for="email">Correo:</label>
+  <input type="email" id="email" name="email">
+  
+  <input type="submit" value="Enviar">
+</form>
+Hay atributos en las etiquetas que son muy utilizados como pueden ser el for, name, value, id y más.
+Suelen ser para identificar la información o darle algún trabajo.
+
+Para hacer nuestra página web más fácil de ver y mejor distribuida hay etiquetas semánticas que se usan mucho por las razones que he dicho
+<header>: cabecera de la página.
+<nav>: menú de navegación.
+<main>: contenido principal.
+<section>: una sección del contenido.
+<footer>: pie de página.
+
+En la etiqueta de body hay dos elementos diferentes que son:
+Elementos de bloques y elementos de línea.
+Los elementos de bloques son grandes estructuras de etiquetas que normalmente los navegadores los muestran como bloques independientes y los separa como por ejemplos los títulos, párrafos, lista o tablas.
+Y los elementos de línea son pequeñas estructuras que representan o describen pequeños trozos de texto o datos y el navegador los suele mostrar en línea uno tras otro dentro del bloque que los contiene. Son un ejemplo los hiperenlaces, las citas o las imágenes.
+Ahora explicaré una etiqueta que no salen en el ejemplo.
+Los enlaces son la etiqueta a a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifesto Mozilla /a
+
+Y estos son las etiquetas más utilizadas y la historia del HTML.
+
