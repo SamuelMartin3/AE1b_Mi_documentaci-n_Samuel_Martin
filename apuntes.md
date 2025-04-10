@@ -53,3 +53,78 @@ Y por último para importar un repositorio ya creado solo tenemos que copiar la 
 Si queremos utilizar Github Pages tendremos que ir al repositorio y en sus opciones de ajustes tendremos que ir al apartado de Pages y poner la rama principal y la carpeta root cuando hayamos hecho eso nos saldrá la URL del Pages y ya. Es muy importante que tengamos el index.html para que lo reconozca y podamos acceder
 
 ![Imagen4.png](img/Imagen4.png)
+
+
+# Markdown
+
+Markdown es un lenguaje de marcas usado por Github.
+
+Tenemos etiquetas básicas para hacer según qué cosas como encabezados diferentes, estilos de letras, listas y más pero ahora veremos las más utilizadas y básicas.
+
+Los encabezados se hacen con la etiqueta # y cuantas más almhodillas le pones más pequeño será.
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Los estilos de letra que podemos utilizar son los siguientes:
+- Para poner letra en itálica o cursiva tendremos que poner el texto entre asterisco o entre barras bajas.
+*texto* o _texto_
+- Para ponerlo en negrita tendremos que hacer lo mismo pero en vez de poner uno pondremos dos.
+** texto ** o __ texto __
+- Para tachar el texto lo pondremos entre ~
+~texto~
+- También podemos hacer listas ordenadas y desordenadas
+Para hacer una lista ordenada solo tendremos que poner un numero delante
+1.Primer cosa
+2.Segunda cosa
+3.Tercer cosa
+- Y para hacerla desordenada solo tendremos que poner uno de los siguientes símbolos
+/*/-/+/
+● Cosa
+-Cosa
++Cosa
+- Para crear párrafos tendremos que introducir lineas en blanco entre el texto
+  
+texto
+  
+- El código se ha de incluir entre acentos graves (`). Si en el código aparece un acento grave, se ha de introducir el carácter dos veces al principio de la sección del código.
+``Todo esto es `código`.``
+- También se puede marcar el área correspondiente al código insertando tres acentos graves al principio y al final. Junto a los tres iniciales se puede indicar el lenguaje (HTML, JavaScript) para que incluso se muestre con los colores adecuados:
+```html
+<html>
+<head>
+</head>
+</html>
+```
+- Para poder hacer links tendremos que poner entre corchetes el nombre del link y después el link entre paréntesis.
+[Texto del link]0(https://ejemplo.com/ "Título opcional del enlace")
+
+- Para introducir imágenes se puede hacer de dos formas diferentes
+
+1. Desde una URL
+![Logo de GitHub](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png "GitHub Logo")
+
+2. Desde un archivo
+![Mi imagen](imagenes/foto.png "Mi foto")
+
+- Para hacer una tabla y configurarla tendremos que hacer esto y podemos hacer esto.
+a. Los dos puntos se usan para alinear las columnas (izquierda , derecha o centrado).
+b. No es necesario que estén alineadas verticalmente. Solo a nivel visual para claridad del código.
+c. Se han de poner al menos tres guiones para separar cada encabezado.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+- Para poner una nota al pie de la página tendremos que poner entre corchetes un cono y un 1.
+Texto con enlace al pie de página [^1]
+
+- Y por último para hacer listas de verificación tendremos que dejar un espacio en blanco entre los corchetes que no estén marcadas
+A-[x]
+B-[ ]
+C-[ ]
