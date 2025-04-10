@@ -232,3 +232,195 @@ Los enlaces son la etiqueta a a href="https://www.mozilla.org/es-AR/about/manife
 
 Y estos son las etiquetas más utilizadas y la historia del HTML.
 
+# CSS
+
+Anteriormente las páginas web eran muy sencillas y planas y para cambiar esto se ideo el CSS que hace que las páginas web se ven muchisimo mejor con más colores, formas, tamaños y cosas inpensables que se podían hacer con CSS. 
+CSS es Cascading Style Sheets, entonces HTML se ocupa de hacer la página web y CSS se ocupa de enlazar las cosas del HTML y darles efectos visuales que se plasman en la página en el navegador que utilices.
+
+Esto tiene ventajas e inconvenientes que ahora veremos:
+
+- Ventajas
+1. Posibilidad de mantener el código
+2. CSS es más potente que HTML en diseños de etiquetas 
+3. CSS es un lenguaje sencillo de utilizar y entender
+4. Se pueden definir más de una página CSS para una o más páginas webs
+
+- Inconvenientes 
+1. El único inconveniente es que no todos los navegadores funcionan ni se comportan igual entonces esto provoca que a veces haya que cambiar las hojas de estilos según el navegador porque no cumple los estandares mínimos del navegador.
+
+- Ubicaciones del CSS
+El CSS se puede implementar en diferentes lugares del código 
+
+1. En la etiqueta se llama estilo inline y se hace con el atributo style. 
+    - ```<p style="text-align:center; color:red">Paràgraf centrat vermell</p>```
+2. En la cabecera del documento que es nombrado estilo interno que funciona de manera que dentro de la etiqueta que pongamos en el head pondremos las caracteristicas de las etiquetas que queremos que cambien.
+    - ``` <head>
+               <style> 
+                  p { 
+                    text-align:center; 
+                    color:red 
+                  } 
+                </style>
+         </head>```
+3. Y por último es el estilo externo que es hacer un archivo CSS aparte y enlazarlo en el head del documento, esta es la mejor manera y más sencilla y dentro del CSS pondremos todos los estilos a las etiquetas que queramos como hacemos en el estilo interno 
+    -  ```<link rel="stylesheet" href="estils.css" type="text/css" />```
+
+- Estructura básica 
+
+1. Cada regla de CSS esta compuesta por un selector y unas declaraciones. El selector indica a que elementos se implementaran los estilos y las declaraciones son las propiedades y valores que ponemos dentro. 
+p -> Selector 
+{
+  font-size: 10pt; ->Declaracion
+  background-color: gray;->Declaracion
+}
+
+2. Comentarios 
+Los comentarios sirven para dar informacion a las personas que vean el codigo de primeras y no entiendan algo que puedan conseguir entenderlo y se ponen de esta manera 
+/*
+Comentarios
+*/
+
+3. Si tenemos dos etiquetas diferentes que queremos que tengan el mismo estilo para no tener que repetir dos veces las declaraciones podemos agruparlas y ponerlo una sola vez 
+
+h1,p {color: red}
+
+4. Tipos de Selectores 
+    - Selector de elementos: Esto afecta a todos los elementos de la página que tengan la etiqueta que pongamos 
+    /* All <a> elements. */
+    a {
+    color: red;
+    }
+    
+    - Selector de clase: Estos solo afectaran a los que en la etiqueta tengan el atributo llamado igual que el id
+            example {
+            property: value;
+            property2: value2;
+                    }
+        Afectaría a los siguientes elementos HTML:
+            <p class="example">
+            <li class="example">
+            <div class="example">
+
+    - Selectores Avanzados
+
+        - Selector Universal: Sirven para hacer que afecten a todas las etiquetas de la página y se ponen con un *
+            Toda la página tendrá un borde de 1 píxel negro 
+            *  {
+             border: 1px solid #000000;
+             }
+
+        - Selector de Atributos: Permiten seleccionar elementos de una función que hemos puesto en el código 
+            Afecta a todas las imagenes que tengan alt 
+            img[alt] {
+                border: 1px solid #000000;
+            }
+
+        - Selector de Hijos: Esto afecta a atributos que vengan de una etiqueta que este por encima suya 
+            Aqui solo los elementos strong que vengan de un h3 se pondran azul
+            h3>strong {
+            color: blue;
+            }
+
+        - Selectores Descendientes: Son iguales que los hijos pero aqui afectan a todos los que esten por debajo
+
+
+        - Selectores de Hermanos Adyecentes: Permiten seleccionar un elemento concreto que esta justo después del otro elemento al mismo nivel
+            <h1>Encabezado 1 </h1>
+            <h2>Encabezado 2 (hermano adyacente) </h2>
+            <h2>Encabezado 2 (hermano no adyacente) </h2>
+
+- Pseudoclases y Pseudoelementos 
+
+    - Pseudoclases: Son para definir acciones que hacen según lo que haga el usuario. 
+        :link: El estado normal por defecto de los enlaces. Tal y como se ven por primera vez.
+        :visited: Enlaces que ya se han visitado con el navegador que se está utilizando.
+        :focus: Enlaces (o campos de formularios, o cualquier otra cosa) que tienen en ese momento el cursor en su interior.
+        :hover: Enlaces que tienen en este momento el puntero del ratón sobre ellos.
+
+    - Psuedoelementos: Es lo mismo que las pseudoclases pero si solo queremos afectar a una cosa en concreto de la linea
+         selector::pseudo-elemento { propiedad: valor; }
+            /* Selecciona la primera línea de un <p> */
+            p::first-line {
+                color: red;
+            }
+
+
+4. Composición 
+
+Algunas etiquetas ocupan todo el ancho de la página y eso se puede modificar con márgenes, bordes y rellenos.
+
+- Los márgenes funcionan con margin y podemos hacer que este orientado hacia un lado o otro, hacia arriba o hacia abajo (margin-top, margin-right, margin-bottom, margin-left ) controlandolo con unidades como píxeles, porcentajes o de forma automática. 
+
+- Los bordes funcionan con border y podemos editar el grosor , estilo, ubicación y color de estos. Con border-width, border-style, border-color
+
+- Y por último podemos editar el relleno de las cosas con el padding que es un espacio transparente que se usa para que las cosas no esten juntas y se pueden modificar hacia los lados y hacia arriba y abajo (padding-top, padding-right, padding-bottom, padding-left).
+
+5. Google Fonts
+
+Esto se utiliza para cambiar la fuente de la letra de nuestra página web de forma muy sencilla. 
+Tendremos que elegir primero la fuente que queremos y arriba a la derecha nos saldra un símbolo de +. Una vez dado ahí nos saldrán dos opciones para copiar y pondremos el link que podemos copiar en el head de nuestra página con la etiqueta link y ya estaría.
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+# Diseño Responsive, Media Query y Bootstrap
+
+- El diseño responsive es una tecnica que sirve para que las páginas web se adapten a la pantalla que el usuario disponga o le vaya de mejor manera y la página no pierda nada de información y sea mejor de leer y ver según sea más grande o pequeña. 
+
+- El media query es una técnica que es de CSS que es para que cuando hagamos el diseño responsive coloquemos las cosas de manera diferente al agrado del programador ya sea cambiando las cosas de color o de ubicación, que se utiliza con el @media.
+    
+    En este caso como podemos ver si la pantalla no supera los 600 píxeles se verá de esa manera, si no se verá como esta en nuestro codigo HTML 
+    @media only screen and (max-width: 600px) {
+    /* column-2 pasará de tener 50% a 100% */
+    .column-2{
+        width: 100%;
+    }
+    /* column-3 pasará de tener 33.33% a 100% */
+    .column-3{
+        width: 100%;
+    }
+    /* column-4 pasará de tener 25% a 50% */
+    .column-4{
+        width: 50%;
+    }
+}
+- Tambien existen operadores para hacer más sencillo y rápido el media query como el and, not, only y or. 
+
+    @media only screen and (min-width:320px) and (max-width:480px){
+        <!—- Aquí van todos los estilos CSS -->
+    }
+
+- Ahora veremos los párametros que más se utilizan en el media query 
+    1. width: anchura de la ventana del navegador.
+    2. height: altura de la ventana del navegador.
+    3. device-width: anchura de la resolución de pantalla.
+    4. device-height: altura de la resolución de pantalla.
+    5. orientation (portrait/landscape): dispositivo en horizontal o en vertical.
+    6. resolution: densidad de píxeles.
+
+- Si ponemos los atributos para el tamaño de la pantalla,la etiqueta Viewport es necesaria. Va implementada en el bloque <head> del documento HTML.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Aquí se especifica que el ancho de la web sea la anchura de la resolución de la pantalla y que no se escale inicialmente. 
+
+- Bootstrap
+
+Bootstrap es un framework CSS (con algo de JavaScript) diseñado para facilitar el desarrollo de sitios web responsivos, es decir, que se adaptan automáticamente a diferentes tamaños de pantalla (móvil, tablet, escritorio, etc.).
+
+- Ventajas del Bootstrap:
+    1. Permite aplicar estilos fácilmente asignando clases HTML sin necesidad de escribir mucho CSS.
+    2. Facilita el diseño responsive con su sistema de columnas y media queries predefinidas.
+    3. Sigue la filosofía Mobile First (primero diseñar para móviles porque actualmente se hacen más páginas para móviles que para ordenadores), lo cual es ideal para la experiencia de usuario.
+
+- Bootstrap usa una plantilla de una tabla de 12 columnas, que permite distribuir los elementos del diseño fácilmente.
+
+    Se adapta al tamaño de pantalla usando clases como:
+    1. col-12 (pantallas muy pequeñas)
+    2. col-sm-6 (pequeñas)
+    3. col-md-4 (medianas)
+    4. col-lg-3 (grandes)
+    5. col-xl-2 (muy grandes)
+
+- Se implenta en nuetra página de forma sencilla como el css o el google fonts, primero tendremos que copiar el link de bootstrap que se encuentra en la paágina principal y copiar la etiqueta link y el script y pegarla en el bloque head del HTML, una vez hecho eso solo queda escoger los componentes que quieres meter y copiar el codigo de la página de bootstrap oficial y implementarlo en la tuya modificando las cosas predeterminadas por las tuyas a tu convenencia. 
+
+- Hay componentes muy utilizados como los sliders, las barrras de navegación, tablas con estilos y la fácil distribución de los espacios que hay en la página usando todo tipo de etiquetas flex, entre muchas más cosas. 
